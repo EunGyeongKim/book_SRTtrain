@@ -5,6 +5,7 @@ import sys
 from SRT import SRT
 from SRT import SeatType
 import time
+# pip install python-telegram-bot
 import telegram
 import nest_asyncio
 nest_asyncio.apply()
