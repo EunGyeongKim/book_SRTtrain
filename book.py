@@ -12,9 +12,9 @@ nest_asyncio.apply()
 
 
 async def main():
-    token = 'toekn'
+    token = 'token'
     bot = telegram.Bot(token=token)
-    chat_id = 1111111112
+    chat_id = 111111
     await bot.sendMessage(chat_id=chat_id, text='예약시작')
     flag = False
     i = 0
@@ -23,11 +23,11 @@ async def main():
             
             i += 1
             print(f"{i}번째 시도")
-            srt = SRT("010-1111-2222", 'password!')
-            dep = '수서'
-            arr = '부산'
-            date = '20230315'
-            time = '144000'
+            srt = SRT("010-0000-0000", 'password!')
+            dep = '정읍'
+            arr = '영등포'
+            date = '20230401'
+            time = '130000'
             trains = srt.search_train(dep, arr, date, time)
             
             reservation = srt.reserve(trains[0], special_seat=SeatType.GENERAL_ONLY)
